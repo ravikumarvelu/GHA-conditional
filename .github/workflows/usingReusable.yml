@@ -1,4 +1,4 @@
-name: Website Deployment
+name: Website Deployment using Reusable
 on:
   push:
     branches:
@@ -82,7 +82,7 @@ jobs:
   deploy:
     needs: build
     uses: ./.github/workflows/reusable.yml
-    
+
   report:
     needs: [lint, deploy]
     if: failure()
