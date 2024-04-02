@@ -4,8 +4,8 @@ on:
     inputs:
       artifact-name:
         description: Name of the artifact to upload
-        required: true
-        default: dist-files
+        required: false
+        default: dist
         type: string
 jobs:
   deploy:
