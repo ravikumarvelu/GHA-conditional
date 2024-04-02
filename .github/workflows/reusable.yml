@@ -12,8 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get the code
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v3
         with:
           name: ${{ inputs.artifact-name }}
+      - name: list the files
+        run: ls -lah
       - name: deploy the code
         run: echo "deploying and uploading"
