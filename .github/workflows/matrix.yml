@@ -9,14 +9,14 @@ jobs:
     strategy:
       matrix:
         node_version: [14, 16, 18]
-        os-system: [ubuntu-latest, windows-latest]
+        os_system: [ubuntu-latest, windows-latest]
         include:
           - node_version: 20
-          - os-system: ubuntu-latest
+          - os_system: ubuntu-latest
         exclude:
           - node_version: 14
-            os-system: windows-latest
-    runs-on: ${{matrix.os-system}}
+            os_system: windows-latest
+    runs-on: ${{ matrix.os_system }}
     steps:
       - name: checkout code
         uses: actions/checkout@v4
