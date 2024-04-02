@@ -8,8 +8,14 @@ jobs:
     continue-on-error: true
     strategy:
       matrix:
-        node_version: [12, 14, 16, 18]
+        node_version: [14, 16, 18]
         os-system: [ubuntu-latest, windows-latest]
+        include:
+          - node_version: 20
+          - os-system: ubuntu-latest
+        exclude:
+          - node_version: 14
+            os-system: windows-latest
     runs-on: ${{matrix.os-system}}
     steps:
       - name: checkout code
