@@ -12,7 +12,7 @@ jobs:
         os_system: [ubuntu-latest, windows-latest]
         include:
           - node_version: 20
-          - os_system: ubuntu-latest
+            os_system: ubuntu-latest
         exclude:
           - node_version: 14
             os_system: windows-latest
